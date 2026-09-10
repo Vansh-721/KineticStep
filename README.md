@@ -66,6 +66,3 @@ The Kinetic Harvesting Floor Tile System is a renewable energy generation soluti
 * **Rudra**
 
 ---
-
-## Intellectual Property Notice
-This project is protected under Indian Patent Law (Provisional Patent Application No: **202611007986**). All designs, transmission kinematics, and technical architectures are published for evaluation purposes only.
