@@ -1,68 +1,79 @@
-# KineticStep
-# Kinetic Harvesting Floor Tile System
+# KineticStep: Kinetic Harvesting Floor Tile System
 
-> **A piezoelectric-free kinetic energy harvesting floor tile mechanism utilizing a split-shaft planetary transmission and stepper motor generator.**
-
----
-
-## Project Overview
-The Kinetic Harvesting Floor Tile System is a renewable energy generation solution designed to convert the vertical linear motion of human footsteps into usable electrical energy. By replacing conventional piezoelectric elements with a robust mechanical rack-and-pinion assembly, a high-ratio two-stage planetary gearbox, and a low-RPM generator, the tile maximizes power generation efficiency and physical durability under continuous footfall loads.
-
-* **Patent Status:** Provisional Patent Filed (Application No: `202611007986`)
-* **Development Stage:** Early Prototyping & IP Protection
-* **Maturity Level:** Technology Readiness Level 4 (TRL 4 - Laboratory Validation)
+A reference repository for the Smart India Hackathon submission, presenting a piezoelectric-free kinetic energy harvesting floor tile mechanism utilizing a split-shaft planetary transmission and stepper motor generator.
 
 ---
 
-## Core Technical Specifications
+## 1. Project Information
 
-| Subsystem / Parameter | Specification | Details |
-| :--- | :--- | :--- |
-| **Linear Stroke Range** | 15 mm – 20 mm | Mechanically limited by elastomeric stoppers on guide rods to prevent hard bottoming out. |
-| **Transmission Ratio** | ~1:25 Speed Multiplication | Two-stage split-shaft planetary gear system linked by an 8 mm intermediate shaft. |
-| **Generator Unit** | NEMA 23 Stepper Motor | Low-RPM generator producing 2-phase AC output. |
-| **Mechanical Fuse** | Flexible Jaw Coupling (Model D20L25) | Absorbs minor shaft misalignments and footfall impact shock to protect motor bearings. |
-| **Linear Guide System** | 3x Guide Rod Assemblies | 8 mm casehardened steel linear shafts with linear bearings in a triangular configuration. |
-| **Return Mechanism** | Concentric Compression Springs | High-cyclic fatigue springs mounted around guide rods and linear bearings. |
-| **Energy Management** | Custom Rectification + MPPT BMS | Converts 2-phase AC to DC; stores power in a LiFePO4 battery pack. |
-| **Chassis / Top Plate** | CNC-machined Aluminum 6061 | Triangular top plate designed for industrial load distribution. |
+- **Project Title:** KineticStep – Kinetic Harvesting Floor Tile System
+- **PS ID:** [26217]
+- **PS Title:** [Student Innovation-Innovative ideas that help manage and generate renewable /sustainable sources more efficiently]
+- **Category:** Hardware
+- **Theme:** Renewable / Sustainable Energy
 
 ---
 
-## Working Principle & Energy Flow
+## 2. Problem Statement
 
-1. **Downforce Application:** A pedestrian steps on the triangular top plate, driving the central piston head downward.
-2. **Linear-to-Rotary Conversion:** The piston rod drives a precision rack and pinion gear through a constrained 15–20 mm vertical stroke.
-3. **Speed Multiplication:** The pinion drives a two-stage split-shaft planetary gearbox (approximate 1:25 ratio), stepping up low-speed human input into high-RPM rotational torque.
-4. **Mechanical Cushioning:** Rotational torque travels through a D20L25 flexible jaw coupling to absorb high-impact load spikes.
-5. **Power Generation:** A high-torque NEMA 23 stepper motor acts as an AC generator, producing 2-phase power.
-6. **Rectification & Storage:** The AC output is rectified to DC via custom circuitry and managed through an MPPT charging module into a LiFePO4 battery bank.
+Student Innovation-Innovative ideas that help manage and generate renewable /sustainable sources more efficiently
+---
+
+## 3. Proposed Solution
+
+KineticStep is a piezoelectric-free energy harvesting floor tile that converts the vertical linear displacement of footsteps into rotational torque using a central rack-and-pinion assembly. This motion is accelerated through a two-stage split-shaft planetary gearbox (approximate 1:25 ratio) to drive a low-RPM NEMA 23 stepper motor generator. The resulting two-phase AC power is rectified and managed via an MPPT charge controller to charge a LiFePO4 battery storage bank safely.
 
 ---
 
-## List Of Components 
+## 4. Key Features
 
-### Mechanical Systems
-* **Chassis:** CNC-machined Aluminum 6061 base and triangular top plate.
-* **Linear Motion:** 8 mm casehardened steel shafts, linear bearings, and elastomeric hard stoppers.
-* **Gearing:** Precision steel rack & pinion set, two-stage planetary gearbox (1:25 ratio).
-* **Return Mechanism:** Chrome silicon fatigue springs.
-* **Rapid Prototyping (Validation):** Nylon/Carbon Fiber filament (wear-resistant gears), High-Precision Tough Resin (SLA tooth verification), and PLA/PETG drafting filaments.
-
-### Electrical & Power Systems
-* **Generation:** NEMA 23 High-Torque Stepper Motor.
-* **Coupling:** Flexible jaw coupling (Model D20L25).
-* **Power Electronics:** Custom rectification PCB, MPPT charge controllers.
-* **Storage:** LiFePO4 battery pack with integrated Smart BMS.
+- **Piezoelectric-Free Transduction:** Replaces fragile crystals with a rugged mechanical transmission for high load capacity.
+- **Constrained Vertical Stroke:** Restricted to 15 mm – 20 mm via elastomeric stoppers to prevent gear bottoming out.
+- **High-Ratio Speed Multiplication:** Dual-stage split-shaft planetary gearbox (~1:25 ratio) stepping up low-speed human steps.
+- **Mechanical Shock Isolation:** Flexible jaw coupling (Model D20L25) acts as a mechanical fuse, dampening impact loads and protecting motor bearings.
+- **Kinematic Stability:** Triangular Aluminum 6061 top plate supported by three 8 mm casehardened steel guide shafts, linear bearings, and return springs.
+- **Intelligent Energy Management:** Custom rectification paired with MPPT charge control and Smart BMS protection for LiFePO4 cells.
 
 ---
 
-## Team Members
-* **Devyani Verma**
-* **Deep Maurya**
-* **Vansh Gupta**
-* **Avneesh**
-* **Garima**
-* **Rudra**
+## 5. Technology Stack
+
+- **Mechanical Chassis:** CNC-machined Aluminum 6061 (base plate and triangular top plate)
+- **Linear Motion & Kinematics:** 8 mm casehardened steel linear shafts, linear bearings, elastomeric hard stops, and high-cyclic fatigue return springs
+- **Transmission:** Precision steel rack and pinion set, two-stage split-shaft planetary gearbox (1:25 ratio), D20L25 flexible jaw coupling
+- **Electrical Generation:** High-torque NEMA 23 stepper motor (2-phase AC low-RPM generator)
+- **Power Electronics & Storage:** Custom 2-phase AC-to-DC rectification PCB, MPPT charge controller, LiFePO4 battery pack with Smart BMS
+- **Prototyping & CAD:** Nylon/Carbon Fiber FDM filaments, Tough SLA Resin, Fusion 360 / SolidWorks
 
 ---
+
+## 6. Architecture
+
+See [docs/architecture.md](docs/architecture.md).
+
+```text
+[ Pedestrian Footstep Downforce ]
+                 │
+                 ▼
+[ Triangular Top Plate & 3-Point Guide Assembly ]
+                 │
+                 ▼
+[ Central Piston Head & Precision Linear Rack ]
+                 │
+                 ▼
+[ Pinion Gear (Linear-to-Rotary Conversion) ]
+                 │
+                 ▼
+[ Two-Stage Planetary Gearbox (1:25 Speed Multiplier) ]
+                 │
+                 ▼
+[ Flexible Jaw Coupling (D20L25 - Shock Absorption) ]
+                 │
+                 ▼
+[ NEMA 23 Stepper Motor (2-Phase AC Generation) ]
+                 │
+                 ▼
+[ Custom Rectification & MPPT Power Management PCB ]
+                 │
+                 ▼
+[ LiFePO4 Battery Storage & Telemetry ]
